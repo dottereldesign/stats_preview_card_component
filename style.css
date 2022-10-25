@@ -6,15 +6,15 @@
 
   --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-neutral-200: hsla(0, 0%, 100%, 0.75);
-  --clr-neutral-300:  hsla(0, 0%, 100%, 0.6);
+  --clr-neutral-300: hsla(0, 0%, 100%, 0.6);
 
   --fw-light: 400;
   --fw-regular: 500;
   --fw-semi-bold: 600;
   --fw-bold: 700;
 
-  --ff-primary-100: font-family: 'Inter', sans-serif;
-  --ff-primary-200: font-family: 'Lexend Deca', sans-serif;
+  --ff-primary-100: "Inter", sans-serif;
+  --ff-primary-200: "Lexend Deca", sans-serif;
 
   --fs-medium: 1rem;
   --fs-large: 1.25rem;
@@ -22,7 +22,7 @@
   --fs-x2-large: 1.75rem;
   --fs-x3-large: 2rem;
 }
-  
+
 /* https://piccalil.li/blog/a-modern-css-reset */
 /* Box sizing rules */
 *,
@@ -90,8 +90,66 @@ select {
   }
 }
 
-  
+body {
+  background-color: var(--clr-primary-100);
+  padding: 1.5em;
+}
 
+article {
+  background-color: var(--clr-primary-200);
+  border-radius: 8px 8px 8px 8px;
+  max-width: 350px;
+  margin: 0 auto;
+}
 
+article picture img {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
 
+p,
+h2,
+h3 {
+  text-align: center;
+}
 
+article h2 {
+  font-family: var(--ff-primary-100);
+  font-size: var(--fs-x2-large);
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-100);
+  padding-top: 1.2em;
+}
+
+article h2 span {
+  color: var(--clr-accent-100);
+}
+
+article > p {
+  padding: 1em 1.5em 2em 1.5em;
+  font-family: var(--ff-primary-100);
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-light);
+  color: var(--clr-neutral-200);
+}
+
+.card_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5em;
+}
+
+.card_wrapper h3 {
+  font-family: var(--ff-primary-100);
+  font-size: var(--fs-x-large);
+  color: var(--clr-neutral-100);
+}
+
+.card_wrapper p {
+  text-transform: uppercase;
+  font-family: var(--ff-primary-200);
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-light);
+  color: var(--clr-neutral-200);
+  letter-spacing: 2px;
+}
