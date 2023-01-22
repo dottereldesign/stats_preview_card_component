@@ -15,9 +15,13 @@
 <body>
 
   <article>
-    <picture>
-      <img src="images/image-header-mobile.jpg" alt="">
-    </picture>
+    <div class="picture-wrapper">
+      <picture>
+        <source srcset="images/image-header-desktop.jpg" media="(min-width: 950px)" />
+        <img src="images/image-header-mobile.jpg" alt="Office meeting.">
+      </picture>
+      <div class="picture_overlay"></div>
+    </div>
 
     <div class="card_container col-2_row-1">
       <h2>Get <span>insights</span> that help your business grow.</h2>

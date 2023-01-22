@@ -63,6 +63,7 @@ body {
 }
 /* A elements that don't have a class get default styles */
 a:not([class]) {
+  -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
 }
 /* Make images easier to work with */
@@ -86,7 +87,9 @@ select {
   *,
   *::before,
   *::after {
+    -webkit-animation-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
@@ -108,6 +111,22 @@ article {
 article picture img {
   border-radius: 8px 8px 0 0;
   width: 100%;
+}
+
+.picture-wrapper {
+  position: relative;
+}
+
+.picture_overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 110;
+  background-color: var(--clr-accent-100);
+  opacity: 45%;
+  position: absolute;
+  border-radius: 8px 8px 0 0;
 }
 
 p,
@@ -174,7 +193,7 @@ h2 {
     width: 428px;
   }
 
-  picture {
+  .picture-wrapper {
     order: 1;
   }
 
@@ -207,5 +226,9 @@ h2 {
 
   .card_container > p {
     padding: 16px 16px 32px 16px;
+  }
+
+  .picture_overlay {
+    border-radius: 0px 8px 8px 0;
   }
 }
